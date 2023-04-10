@@ -13,7 +13,7 @@ class XmlParser {
       final inetCon = InternetConnectionChecker();
       bool isConnected = await inetCon.hasConnection;
       if (!isConnected){
-        news.add(NewsModel(newsTitle: 'no inet connection', newsUrl: '', newsPubDate: ''));
+        news.add(NewsModel(newsTitle: 'Ñheck your internet connection', newsUrl: '', newsPubDate: ''));
         return news;
       }
       final request = await HttpClient().getUrl(Uri.parse(url));
